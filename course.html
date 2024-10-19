@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            margin: 20px;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 30px;
+        }
+
+        .menu {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 20px;
+            padding: 50px;
+            
+            
+        }
+        
+    
+
+
+        .item {
+            background-color: #B0B0B0;
+            padding: 20px;
+            border: 2px solid #000;
+            position: relative;
+            
+        }
+
+        .label {
+            background-color: #D56A6A;
+            color: #fff;
+            position: absolute;
+            top: -2px;
+            right: -1px;
+            width: 100px;
+            padding: 5px;
+            font-weight: bold;
+            text-align: center;
+            border: 2px solid #000;
+        }
+
+        .chicken .label {
+            background-color: #F5B7B1;
+            color: black;
+        }
+
+        .beef .label {
+            background-color: #D56A6A;
+        }
+
+        .sushi .label {
+            background-color: #F7DC6F;
+            color: black;
+        }
+
+        p {
+            color: black;
+        }
+
+        
+        @media (min-width: 768px) and (max-width: 991px) {
+            .menu {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 60px;
+                
+            }
+
+            .item {
+                width: 100%;
+                margin: -20px;
+            }
+
+            .item.sushi {
+                grid-column: span 2;
+            }
+        }
+        
+        
+        @media screen and (max-width: 767px) {
+  .menu {
+    flex-direction: column;
+  }
+        
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Our Menu</h1>
+    </header>
+
+    <section class="menu">
+
+        <div class="item chicken" id="x">
+            <div class="label">Chicken</div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="item beef" id="y">
+            <div class="label">Beef</div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="item sushi" id="z">
+            <div class="label">Sushi</div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+
+    </section>
+</body>
+
+</html>
